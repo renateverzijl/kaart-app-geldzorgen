@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eerste stap bij geldzorgen</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Eerste stap bij geldzorgen</h1>
+        <p class="subtitle">Kies wat bij jou past en sleep de kaartjes naar de vakken.</p>
+      </div>
+      <div class="actions" aria-label="Acties">
+        <button type="button" id="resetBtn">Opnieuw</button>
+        <button type="button" id="printBtn">Print</button>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <section class="placemat" aria-label="Placemat">
+        <div class="intro">
+          <div>
+            <strong>Je staat er niet alleen voor.</strong>
+            <span>Een klein gesprek kan al helpen.</span>
+          </div>
+          <p>Elke kleine stap maakt verschil.</p>
+        </div>
+
+        <div class="drop-grid" id="dropGrid"></div>
+
+        <div class="bottom-row">
+          <section class="phrases-panel">
+            <div>
+              <h2>Voorbeeldzinnen die je kunt gebruiken om een moeilijk gesprek te starten</h2>
+              <p>Kies een zin die jij kunt zeggen. Of pas de zin aan zodat hij bij jou past.</p>
+            </div>
+            <div class="phrase-slots" id="phraseSlots" aria-label="Gekozen zinnen"></div>
+          </section>
+
+        </div>
+      </section>
+
+      <aside class="card-tray" aria-label="Kaartjes">
+        <div class="tray-header">
+          <h2>Kaartjes</h2>
+          <p id="helperText">Sleep een kaart naar een vak, of klik eerst op een kaart en daarna op een vak.</p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Kaartgroepen">
+          <button type="button" class="tab active" data-filter="all">Alles</button>
+          <button type="button" class="tab" data-filter="1">1</button>
+          <button type="button" class="tab" data-filter="2">2</button>
+          <button type="button" class="tab" data-filter="3">3</button>
+          <button type="button" class="tab" data-filter="4">4</button>
+          <button type="button" class="tab" data-filter="5">5</button>
+          <button type="button" class="tab" data-filter="phrase">Zinnen</button>
+        </div>
+        <div class="cards" id="cards"></div>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
